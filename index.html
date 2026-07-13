@@ -23,14 +23,15 @@
   body{
     margin:0; font-family:var(--font-body);
     background:var(--bg-glow), var(--bg); background-attachment:fixed;
-    color:var(--text); padding:28px 20px 60px;
+    color:var(--text); padding:28px 20px;
     -webkit-font-smoothing:antialiased;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
   }
   h1,h2{font-family:var(--font-display); margin:0;}
   button{font-family:var(--font-body);}
 
   #telaLogin{
-    max-width:360px; margin:12vh auto 0; background:var(--card);
+    max-width:360px; width:100%; margin:0; background:var(--card);
     border:1px solid var(--line); border-radius:var(--radius); padding:32px;
   }
   #telaLogin .eyebrow{
@@ -56,7 +57,7 @@
     padding:6px 8px; font-size:16px; cursor:pointer; color:var(--muted);
   }
 
-  #app{max-width:1000px; margin:0 auto;}
+  #app{max-width:640px; width:100%; margin:0 auto;}
   .topbar{
     display:flex; justify-content:space-between; align-items:flex-end;
     margin-bottom:20px; padding-bottom:18px; border-bottom:1px solid var(--line);
@@ -88,8 +89,7 @@
     50%{box-shadow:0 0 0 7px rgba(45,212,191,0);}
   }
 
-  .grid{display:grid; grid-template-columns: 1.15fr 0.85fr; gap:18px;}
-  @media(max-width:760px){ .grid{grid-template-columns:1fr;} }
+  .grid{display:grid; grid-template-columns: 1fr; gap:18px;}
 
   .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px;}
   .card-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;}
@@ -141,7 +141,7 @@
   }
   .ticket button:hover{border-color:var(--accent); color:var(--accent);}
 
-  .historico{max-height:420px; overflow-y:auto; display:flex; flex-direction:column; gap:2px;}
+  .historico{max-height:220px; overflow-y:auto; display:flex; flex-direction:column; gap:2px;}
   .historico-item{
     font-size:12.5px; color:var(--text); padding:9px 2px; border-bottom:1px solid var(--line);
     display:flex; justify-content:space-between; gap:10px;
